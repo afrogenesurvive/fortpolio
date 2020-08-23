@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Reactions
+          Learn Reaction Times
         </a>
       </header>
     </div>

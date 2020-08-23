@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   console.log('foo',process.env);
+  console.log('bar',process.env.REACT_APP_SECRET);
   return (
     <div className="App">
       <header className="App-header">

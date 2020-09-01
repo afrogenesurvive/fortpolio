@@ -1,0 +1,6 @@
+.mainTop {
+  border: 1px solid black;
+}
+.subGridCell {
+  width: fit-content;
+}

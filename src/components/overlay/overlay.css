@@ -1,0 +1,23 @@
+.overlayTop {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 1);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.x {
+  margin: 1rem auto;
+  color: #ffffff;
+}
+.overlayLogo {
+  height: 40vmin;
+  margin: 0 auto;
+  /* display: block; */
+}

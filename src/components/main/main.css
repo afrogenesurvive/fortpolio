@@ -32,3 +32,9 @@
 .edgeCell {
   overflow: scroll;
 }
+.linkCenterCell {
+  border: 1px solid black;
+}
+.linkGridContainer {
+  margin: 15vh auto !important;
+}

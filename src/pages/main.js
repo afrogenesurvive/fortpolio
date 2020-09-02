@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import Skills from '../components/main/skills';
 import Experience from '../components/main/experience';
 import Works from '../components/main/works';
+import Links from '../components/main/links';
 
 class Main extends Component {
 
@@ -124,7 +125,7 @@ class Main extends Component {
             {...(this.state.transition ? { timeout: 1500 } : {})}
             >
             <div className="mainPaper">
-            Links
+            <Links/>
             </div>
             </Grow>
           )}

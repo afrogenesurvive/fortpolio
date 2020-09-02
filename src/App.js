@@ -20,6 +20,7 @@ class App extends Component {
       data: 'loading'
     },
     grow: false,
+    sequencing: true,
   };
 
   constructor(props) {
@@ -32,15 +33,15 @@ class App extends Component {
 
   componentDidMount() {
     setTimeout(()=>{
-      console.log('timeup');
       this.setState({
         overlay:{
           show: false,
           data: null
         },
-        grow: true
+        grow: true,
+        sequencing: false
     })
-    }, 3500);
+  }, 2500);
   }
 
   componentWillUnmount() {
@@ -77,7 +78,7 @@ class App extends Component {
                 grow={this.state.grow}
               />}/>
               <Route path="/main" render={(props) => <Main {...props}
-
+                sequencing={this.state.sequencing}
               />}/>
               <Redirect from="/" to="/intro" exact />
               <Redirect from="*" to="/intro" exact />

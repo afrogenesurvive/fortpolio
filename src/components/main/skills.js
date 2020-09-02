@@ -1,69 +1,107 @@
 import React, {useState} from 'react';
 import Grid from '@material-ui/core/Grid';
 import Slide from '@material-ui/core/Slide';
+import Zoom from '@material-ui/core/Zoom';
+import Button from '@material-ui/core/Button';
 import './main.css';
 
 const Skills = (props) => {
-  
+
   const [state, setState] = useState('');
   const handleStateChange = (args) => {
-    setState(args);
+    setState({item: args,transition:true});
    }
 
   return (
     <div className="mainTop">
     <Grid container spacing={1}>
-    <Grid item xs={4}  className="subGridCell">
+    <Grid item xs={4}  className="subGridCell skillGrid">
     <ul className="skillsList">
     <li className="skillsListItem">
     <p>Frontend</p>
     </li>
     <li className="skillsListItem">
-    <button type="button" onClick={handleStateChange('a')}>Vanilla JS</button>
+    <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'a')}>
+      Vanilla JS
+    </Button>
     </li>
     <li className="skillsListItem">
-    <button type="button" onClick={handleStateChange('b')}>Choclate JS</button>
+    <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'b')}>
+      Choclate JS
+    </Button>
     </li>
     <li className="skillsListItem">
-    <button type="button" onClick={handleStateChange('c')}>Caramel JS</button>
+    <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'c')}>
+      Caramel JS
+    </Button>
     </li>
     </ul>
     </Grid>
+
     <Grid item xs={4}  className="subGridCell">
-    {state === 'a' && (
-
+    {state.item === 'a' && (
+      <Slide direction="down" in={state.transition}>
+      <div>
       <p>Vanilla</p>
-
+      </div>
+      </Slide>
     )}
-    {state === 'b' && (
+    {state.item === 'b' && (
+      <Slide direction="up" in={state.transition}>
+      <div>
       <p>Choclate</p>
+      </div>
+      </Slide>
     )}
-    {state === 'c' && (
+    {state.item === 'c' && (
+      <Slide direction="down" in={state.transition}>
+      <div>
       <p>Caramel</p>
+      </div>
+      </Slide>
     )}
-    {state === 'd' && (
+    {state.item === 'x' && (
+      <Slide direction="up" in={state.transition}>
+      <div>
       <p>Node</p>
+      </div>
+      </Slide>
     )}
-    {state === 'e' && (
+    {state.item === 'y' && (
+      <Slide direction="down" in={state.transition}>
+      <div>
       <p>Mongo</p>
+      </div>
+      </Slide>
     )}
-    {state === 'f' && (
+    {state.item === 'z' && (
+      <Slide direction="up" in={state.transition}>
+      <div>
       <p>GQL</p>
+      </div>
+      </Slide>
     )}
     </Grid>
-    <Grid item xs={4}  className="subGridCell">
+
+    <Grid item xs={4}  className="subGridCell skillGrid">
     <ul className="skillsList">
     <li className="skillsListItem">
     <p>Backend</p>
     </li>
     <li className="skillsListItem">
-    <button type="button" onClick={handleStateChange('x')}>NodeJS</button>
+    <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'x')}>
+      NodeJS
+    </Button>
     </li>
     <li className="skillsListItem">
-    <button type="button" onClick={handleStateChange('y')}>MongoDb</button>
+    <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'y')}>
+      MongoDb
+    </Button>
     </li>
     <li className="skillsListItem">
-    <button type="button" onClick={handleStateChange('z')}>GrapQL</button>
+    <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'z')}>
+      GrapQL
+    </Button>
     </li>
     </ul>
     </Grid>

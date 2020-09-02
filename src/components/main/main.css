@@ -1,6 +1,34 @@
-.mainTop {
-  border: 1px solid black;
+.timelineTop {
+  margin-top: 3rem;
 }
 .subGridCell {
   width: fit-content;
+}
+.skillsList {
+  padding: 0;
+  list-style-type: none;
+}
+.skillGrid {
+  /* border: 1px solid black; */
+}
+.skillsListItem {
+  margin: 3rem auto;
+}
+.experienceItem {
+  text-align: initial;
+}
+.timelineConnector {
+  height: 5rem;
+}
+.expSubItem {
+  border: 1px solid black;
+}
+.workGridCell {
+  border: 1px solid black;
+}
+.workMidCell {
+  height: 60vh;
+}
+.edgeCell {
+  overflow: scroll;
 }

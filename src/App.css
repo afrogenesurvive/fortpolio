@@ -68,16 +68,19 @@
 
 .mainPaper {
   text-align: center;
-  height: 90vh;
+  height: 95vh;
   border: 1px solid #000000;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
+  padding: 0 3rem;
+  overflow: scroll;
 }
 .mainMenuList {
   padding: 0;
   list-style-type: none;
+  text-align: left;
 }
 .mainMenuListItem {
   margin: 3rem auto;

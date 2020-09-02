@@ -4,6 +4,8 @@ import logo from '../logo.svg';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Grow from '@material-ui/core/Grow';
+import Zoom from '@material-ui/core/Zoom';
+import Button from '@material-ui/core/Button';
 
 import Skills from '../components/main/skills';
 import Experience from '../components/main/experience';
@@ -12,7 +14,7 @@ import Works from '../components/main/works';
 class Main extends Component {
 
   state = {
-    menuSelect: null,
+    menuSelect: '',
     transition: false,
   };
 
@@ -24,7 +26,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
-
+    this.setState({transition: true})
   }
 
   componentWillUnmount() {
@@ -32,12 +34,6 @@ class Main extends Component {
   menuSelect = (args) => {
     this.setState({
       menuSelect: args,
-      transition: true
-    })
-    // this.transition()
-  }
-  transition = () => {
-    this.setState({
       transition: true
     })
   }
@@ -49,17 +45,45 @@ class Main extends Component {
           <Grid item xs={2}  className="mainGridCell">
           <ul className="mainMenuList">
             <li className="mainMenuListItem">
-              <button type="button" onMouseEnter={this.menuSelect.bind(this,'a')}>Skills</button>
+            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'a')}>
+              Skills
+            </Button>
             </li>
             <li className="mainMenuListItem">
-              <button type="button" onMouseEnter={this.menuSelect.bind(this,'b')}>Experience</button>
+            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'b')}>
+              Experience
+            </Button>
             </li>
             <li className="mainMenuListItem">
-              <button type="button" onMouseEnter={this.menuSelect.bind(this,'c')}>Works</button>
+            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'c')}>
+              Works
+            </Button>
+            </li>
+            <li className="mainMenuListItem">
+            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'d')}>
+              Links
+            </Button>
+            </li>
+            <li className="mainMenuListItem">
+            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'')}>
+              Intro
+            </Button>
             </li>
           </ul>
           </Grid>
+
           <Grid item xs={10} className="mainGridCell">
+          {this.props.sequencing === false &&
+            this.state.menuSelect === '' && (
+            <Zoom
+            in={this.state.transition}
+            style={{ transitionDelay: this.state.transition ? '100ms' : '0ms' }}
+            >
+            <div className="mainPaper">
+            intro video/gif/carousel
+            </div>
+            </Zoom>
+          )}
           {this.state.menuSelect === 'a' && (
             <Grow
             in={this.state.transition}
@@ -90,6 +114,17 @@ class Main extends Component {
             >
             <div className="mainPaper">
             <Works/>
+            </div>
+            </Grow>
+          )}
+          {this.state.menuSelect === 'd' && (
+            <Grow
+            in={this.state.transition}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(this.state.transition ? { timeout: 1500 } : {})}
+            >
+            <div className="mainPaper">
+            Links
             </div>
             </Grow>
           )}

@@ -72,17 +72,15 @@ const Intro = (props) => {
             <Grid item xs={5}>
             </Grid>
             <Grid item xs={3}>
-            <Slide
-              direction="left"
-              in={props.grow}
-              {...(props.grow ? { timeout: 4000 } : {})}
-              mountOnEnter
-              unmountOnExit
-            >
+              <Grow
+                in={props.grow}
+                style={{ transformOrigin: '0 0 0' }}
+                {...(props.grow ? { timeout: 3000 } : {})}
+              >
               <NavLink to="/main">
                 <Button variant="contained">More</Button>
               </NavLink>
-            </Slide>
+              </Grow>
             </Grid>
             <Grid item xs={5}>
             </Grid>

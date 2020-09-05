@@ -29,6 +29,13 @@
 .workMidCell {
   height: 60vh;
 }
+.worksDetailGrid {
+  border: 1px solid black;
+}
+.worksDetailselectList {
+  list-style-type: none;
+  padding: 0;
+}
 .edgeCell {
   overflow: scroll;
 }

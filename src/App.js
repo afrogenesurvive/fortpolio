@@ -21,6 +21,20 @@ class App extends Component {
     },
     grow: false,
     sequencing: true,
+    works: [
+      {
+        category: 'a',
+        works: ['urla','urlb','urlc','urlx','urla1',]
+      },
+      {
+        category: 'b',
+        works: ['urld','urle','urlf','urla1','urlgh','pop','ussr']
+      },
+      {
+        category: 'c',
+        works: ['urlg','urlh','urli','urlax','1','2','3']
+      },
+    ],
   };
 
   constructor(props) {
@@ -79,6 +93,7 @@ class App extends Component {
               />}/>
               <Route path="/main" render={(props) => <Main {...props}
                 sequencing={this.state.sequencing}
+                works={this.state.works}
               />}/>
               <Redirect from="/" to="/intro" exact />
               <Redirect from="*" to="/intro" exact />

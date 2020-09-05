@@ -15,7 +15,7 @@ const Skills = (props) => {
   return (
     <div className="mainTop">
     <Grid container spacing={1}>
-    <Grid item xs={4}  className="subGridCell skillGrid">
+    <Grid item xs={2}  className="subGridCell skillGrid">
     <ul className="skillsList">
     <li className="skillsListItem">
     <p>Frontend</p>
@@ -38,7 +38,7 @@ const Skills = (props) => {
     </ul>
     </Grid>
 
-    <Grid item xs={4}  className="subGridCell">
+    <Grid item xs={8}  className="subGridCell">
     {state.item === 'a' && (
       <Slide direction="down" in={state.transition}>
       <div>
@@ -83,7 +83,7 @@ const Skills = (props) => {
     )}
     </Grid>
 
-    <Grid item xs={4}  className="subGridCell skillGrid">
+    <Grid item xs={2}  className="subGridCell skillGrid">
     <ul className="skillsList">
     <li className="skillsListItem">
     <p>Backend</p>

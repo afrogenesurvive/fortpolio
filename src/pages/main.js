@@ -19,9 +19,10 @@ class Main extends Component {
     transition: false,
   };
 
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+    this.works = props.works;
+  }
 
   componentDidUpdate() {
   }
@@ -114,7 +115,9 @@ class Main extends Component {
             {...(this.state.transition ? { timeout: 1500 } : {})}
             >
             <div className="mainPaper">
-            <Works/>
+            <Works
+              works={this.props.works}
+            />
             </div>
             </Grow>
           )}

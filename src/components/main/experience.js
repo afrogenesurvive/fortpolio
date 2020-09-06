@@ -22,7 +22,7 @@ const Experience = (props) => {
     <Timeline align="alternate" className="timeline">
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot className="redBg greenGlowBg"/>
           <TimelineConnector className="timelineConnector"/>
         </TimelineSeparator>
         <TimelineContent className="experienceItem">
@@ -33,7 +33,7 @@ const Experience = (props) => {
         )}
         {state.item === 'a' && (
         <Slide direction="left" in={state.transition}>
-        <div className="expSubItem" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
+        <div className="expSubItem redBorder" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
         <p>Eat</p>
         <p>Eat</p>
         <p>Eat</p>
@@ -45,7 +45,7 @@ const Experience = (props) => {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot color="primary" />
+          <TimelineDot className="yellowBg" />
           <TimelineConnector className="timelineConnector"/>
         </TimelineSeparator>
         <TimelineContent className="experienceItem">
@@ -56,7 +56,7 @@ const Experience = (props) => {
         )}
         {state.item === 'b' && (
         <Slide direction="right" in={state.transition}>
-        <div className="expSubItem" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
+        <div className="expSubItem yellowBorder" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
         <p>Code</p>
         <p>Code</p>
         <p>Code</p>
@@ -68,7 +68,7 @@ const Experience = (props) => {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot color="secondary" />
+          <TimelineDot className="greenBg" />
           <TimelineConnector className="timelineConnector"/>
         </TimelineSeparator>
         <TimelineContent className="experienceItem">
@@ -79,7 +79,7 @@ const Experience = (props) => {
         )}
         {state.item === 'c' && (
         <Slide direction="left" in={state.transition}>
-        <div className="expSubItem" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
+        <div className="expSubItem greenBorder" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
         <p>Sleep</p>
         <p>Sleep</p>
         <p>Sleep</p>
@@ -91,7 +91,7 @@ const Experience = (props) => {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot className="redBg"/>
           <TimelineConnector className="timelineConnector"/>
         </TimelineSeparator>
         <TimelineContent className="experienceItem">
@@ -102,7 +102,7 @@ const Experience = (props) => {
         )}
         {state.item === 'd' && (
         <Slide direction="right" in={state.transition}>
-        <div className="expSubItem" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
+        <div className="expSubItem redBorder" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
         <p>Repeat</p>
         <p>Repeat</p>
         <p>Repeat</p>
@@ -114,7 +114,7 @@ const Experience = (props) => {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot color="secondary" />
+          <TimelineDot className="yellowBg" />
           <TimelineConnector className="timelineConnector"/>
         </TimelineSeparator>
         <TimelineContent className="experienceItem">
@@ -125,7 +125,7 @@ const Experience = (props) => {
         )}
         {state.item === 'e' && (
         <Slide direction="left" in={state.transition}>
-        <div className="expSubItem" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
+        <div className="expSubItem yellowBorder" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
         <p>Sleep</p>
         <p>Sleep</p>
         <p>Sleep</p>
@@ -137,7 +137,7 @@ const Experience = (props) => {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot className="greenBg"/>
         </TimelineSeparator>
         <TimelineContent className="experienceItem">
         {state.item !== 'f' &&(
@@ -147,7 +147,7 @@ const Experience = (props) => {
         )}
         {state.item === 'f' && (
         <Slide direction="right" in={state.transition}>
-        <div className="expSubItem" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
+        <div className="expSubItem greenBorder" onMouseLeave={handleStateChange.bind(this,{item:'',transition:false})}>
         <p>Repeat</p>
         <p>Repeat</p>
         <p>Repeat</p>

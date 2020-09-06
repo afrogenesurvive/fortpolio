@@ -18,7 +18,7 @@ const Skills = (props) => {
     <Grid item xs={2}  className="subGridCell skillGrid">
     <ul className="skillsList">
     <li className="skillsListItem">
-    <p>Frontend</p>
+    <h2>Frontend</h2>
     </li>
     <li className="skillsListItem">
     <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'a')}>
@@ -41,42 +41,42 @@ const Skills = (props) => {
     <Grid item xs={8}  className="subGridCell">
     {state.item === 'a' && (
       <Slide direction="down" in={state.transition}>
-      <div className="skillsCenterCell">
+      <div className="skillsCenterCell redBorder">
       <p>Vanilla</p>
       </div>
       </Slide>
     )}
     {state.item === 'b' && (
       <Slide direction="up" in={state.transition}>
-      <div className="skillsCenterCell">
+      <div className="skillsCenterCell yellowBorder">
       <p>Choclate</p>
       </div>
       </Slide>
     )}
     {state.item === 'c' && (
       <Slide direction="down" in={state.transition}>
-      <div className="skillsCenterCell">
+      <div className="skillsCenterCell greenBorder">
       <p>Caramel</p>
       </div>
       </Slide>
     )}
     {state.item === 'x' && (
       <Slide direction="up" in={state.transition}>
-      <div className="skillsCenterCell">
+      <div className="skillsCenterCell redBorder">
       <p>Node</p>
       </div>
       </Slide>
     )}
     {state.item === 'y' && (
       <Slide direction="down" in={state.transition}>
-      <div className="skillsCenterCell">
+      <div className="skillsCenterCell yellowBorder">
       <p>Mongo</p>
       </div>
       </Slide>
     )}
     {state.item === 'z' && (
       <Slide direction="up" in={state.transition}>
-      <div className="skillsCenterCell">
+      <div className="skillsCenterCell greenBorder">
       <p>GQL</p>
       </div>
       </Slide>
@@ -86,7 +86,7 @@ const Skills = (props) => {
     <Grid item xs={2}  className="subGridCell skillGrid">
     <ul className="skillsList">
     <li className="skillsListItem">
-    <p>Backend</p>
+    <h2>Backend</h2>
     </li>
     <li className="skillsListItem">
     <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,'x')}>

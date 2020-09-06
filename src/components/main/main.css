@@ -1,3 +1,5 @@
+
+
 .timelineTop {
   margin-top: 3rem;
 }
@@ -17,6 +19,7 @@
 .skillsCenterCell {
   margin: 0 3rem;
   border: 1px solid #ffffff;
+  padding: 1rem;
   border-radius: 0 15px 0 15px;
 }
 .experienceItem {
@@ -68,4 +71,30 @@
   width: fit-content;
   padding: 1rem 3rem;
   border-radius: 0 15px 0 15px;
+}
+
+
+@-webkit-keyframes redBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FF5F5B, 0 0 9px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B, 0 0 15px #FF5F5B;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FF5F5B, 0 0 8px #FF5F5B, 0 0 10px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B;
+  }
+}
+@-moz-keyframes yellowBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FFB637, 0 0 9px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637, 0 0 15px #FFB637;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FFB637, 0 0 8px #FFB637, 0 0 10px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637;
+  }
+}
+@keyframes greenBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #04CC80, 0 0 9px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80, 0 0 15px #04CC80;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #04CC80, 0 0 8px #04CC80, 0 0 10px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80;
+  }
 }

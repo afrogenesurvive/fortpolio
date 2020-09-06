@@ -72,7 +72,7 @@ const Works = (props) => {
       <Grid item xs={7}  className="workGridCellEmpty">
 
       </Grid>
-      <Grid item xs={5}  className="workGridCell edgeCell">
+      <Grid item xs={5}  className="workGridCell edgeCell redBorder">
       <p>
       <span onClick={prevState}>prev</span>
       Select Category
@@ -82,7 +82,7 @@ const Works = (props) => {
       {state.value}
       </p>
       </Grid>
-      <Grid item xs={12}  className="workGridCell workMidCell">
+      <Grid item xs={12}  className="workGridCell workMidCell yellowBorder">
 
       {state.value === 'a' && (
       <Grow
@@ -182,7 +182,8 @@ const Works = (props) => {
       )}
 
       </Grid>
-      <Grid item xs={7}  className="workGridCell edgeCell">
+
+      <Grid item xs={7}  className="workGridCell edgeCell greenBorder">
       {state.value === 'a' && (
       <Slide direction="up" in={state.transition}>
       <div>

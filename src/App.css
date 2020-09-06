@@ -1,3 +1,8 @@
+/* @font-face {
+  font-family: 'WhitRabt';
+  src: url('./assets/whitrabt.ttf');
+} */
+@import url('/assets/VT323-Regular.ttf');
 .App {
   text-align: center;
 }
@@ -27,7 +32,10 @@
 .introDiv {
   width: 85%;
   margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 15px 0 15px 0;
 }
+
 .skillwheel {
   max-height: 120vh;
 }
@@ -74,13 +82,41 @@
   }
 }
 p {
+  font-family: 'VT323', monospace;
   color: #ffffff;
   margin: 0;
 }
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+  font-family: 'VT323', monospace;
+}
+.MuiButton-root {
+  font-family: 'VT323', monospace !important;
+}
 
+.redGlow {
+  -webkit-animation: redBorderGlow 1.5s ease-in-out infinite alternate;
+  -moz-animation: redBorderGlow 1.5s ease-in-out infinite alternate;
+  animation: redBorderGlow 1.5s ease-in-out infinite alternate;
+}
+.yellowGlow {
+  -webkit-animation: yellowBorderGlow 1.5s ease-in-out infinite alternate;
+  -moz-animation: yellowBorderGlow 1.5s ease-in-out infinite alternate;
+  animation: yellowBorderGlow 1.5s ease-in-out infinite alternate;
+}
+.greenGlow {
+  -webkit-animation: greenBorderGlow 1.5s ease-in-out infinite alternate;
+  -moz-animation: greenBorderGlow 1.5s ease-in-out infinite alternate;
+  animation: greenBorderGlow 1.5s ease-in-out infinite alternate;
+}
+.greenGlowBg {
+  -webkit-animation: greenBgGlow 1.5s ease-in-out infinite alternate;
+  -moz-animation: greenBgGlow 1.5s ease-in-out infinite alternate;
+  animation: greenBgGlow 1.5s ease-in-out infinite alternate;
+}
 .main-content {
-  background-color: #000000;
-  /* background-color: #253142; */
+  /* background-color: #000000; */
+  background-color: #253142;
   /* background-color: #212121; */
 }
 
@@ -91,7 +127,15 @@ p {
 
   border-radius: 15px 0 15px 0 !important;
 }
-
+.redBg {
+  background-color: #FF5F5B !important;
+}
+.yellowBg {
+  background-color: #FFB637 !important;
+}
+.greenBg {
+  background-color: #04CC80 !important;
+}
 .redBorder {
   border: 2px solid #FF5F5B !important;
 }
@@ -168,4 +212,93 @@ p {
 .MuiButton-outlinedPrimary {
   color: #ffffff !important;
   border: 1px solid #ffffff !important;
+}
+
+
+
+/*glow*/
+
+/* FF5F5B
+FFB637
+04CC80 */
+
+@-webkit-keyframes redBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FF5F5B, 0 0 9px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B, 0 0 15px #FF5F5B;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FF5F5B, 0 0 8px #FF5F5B, 0 0 10px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B;
+  }
+}
+@-moz-keyframes redBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FF5F5B, 0 0 9px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B, 0 0 15px #FF5F5B;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FF5F5B, 0 0 8px #FF5F5B, 0 0 10px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B;
+  }
+}
+@keyframes redBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FF5F5B, 0 0 9px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B, 0 0 15px #FF5F5B;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FF5F5B, 0 0 8px #FF5F5B, 0 0 10px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B;
+  }
+}
+@-webkit-keyframes yellowBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FFB637, 0 0 9px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637, 0 0 15px #FFB637;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FFB637, 0 0 8px #FFB637, 0 0 10px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637;
+  }
+}
+@-moz-keyframes yellowBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FFB637, 0 0 9px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637, 0 0 15px #FFB637;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FFB637, 0 0 8px #FFB637, 0 0 10px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637;
+  }
+}
+@keyframes yellowBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FFB637, 0 0 9px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637, 0 0 15px #FFB637;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FFB637, 0 0 8px #FFB637, 0 0 10px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637;
+  }
+}
+@-webkit-keyframes greenBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #04CC80, 0 0 9px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80, 0 0 15px #04CC80;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #04CC80, 0 0 8px #04CC80, 0 0 10px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80;
+  }
+}
+@-moz-keyframes greenBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #04CC80, 0 0 9px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80, 0 0 15px #04CC80;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #04CC80, 0 0 8px #04CC80, 0 0 10px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80;
+  }
+}
+@keyframes greenBorderGlow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #04CC80, 0 0 9px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80, 0 0 15px #04CC80;
+  }
+  to {
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #04CC80, 0 0 8px #04CC80, 0 0 10px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80;
+  }
+}
+@keyframes greenBgGlow {
+  from {
+    border: 1px solid #fff, 1px solid #fff, 1px solid #fff, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80;
+  }
+  to {
+    border: 1px solid #fff, 1px solid #fff, 1px solid #fff, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80;
+  }
 }

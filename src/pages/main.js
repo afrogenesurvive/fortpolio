@@ -83,8 +83,8 @@ class Main extends Component {
             in={this.state.transition}
             style={{ transitionDelay: this.state.transition ? '100ms' : '0ms' }}
             >
-            <div className="mainPaper greenBorder">
-              <div className="introDiv">
+            <div className="mainPaper r">
+              <div className="introDiv greenBorder">
               <img src={agLogoAnim} className="intro2Logo" alt="logo" />
               <h3 className="bioHeader">
               About Me:

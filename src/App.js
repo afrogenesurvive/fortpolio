@@ -55,7 +55,7 @@ class App extends Component {
         grow: true,
         sequencing: false
     })
-  }, 2500);
+  }, 1600);
   }
 
   componentWillUnmount() {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
 import logo from '../logo.svg';
+import agLogoAnim from '../assets/afrogeneanim.gif';
+import skillwheel from '../assets/skillwheel2.png';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Grow from '@material-ui/core/Grow';
@@ -47,27 +49,27 @@ class Main extends Component {
           <Grid item xs={2}  className="mainGridCell">
           <ul className="mainMenuList">
             <li className="mainMenuListItem">
-            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'a')}>
+            <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'a')}>
               Skills
             </Button>
             </li>
             <li className="mainMenuListItem">
-            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'b')}>
+            <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'b')}>
               Experience
             </Button>
             </li>
             <li className="mainMenuListItem">
-            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'c')}>
+            <Button variant="outlined" className="greenButton" onMouseEnter={this.menuSelect.bind(this,'c')}>
               Works
             </Button>
             </li>
             <li className="mainMenuListItem">
-            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'d')}>
+            <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'d')}>
               Links
             </Button>
             </li>
             <li className="mainMenuListItem">
-            <Button variant="outlined" color="primary" onMouseEnter={this.menuSelect.bind(this,'')}>
+            <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'')}>
               Intro
             </Button>
             </li>
@@ -81,8 +83,20 @@ class Main extends Component {
             in={this.state.transition}
             style={{ transitionDelay: this.state.transition ? '100ms' : '0ms' }}
             >
-            <div className="mainPaper">
-            intro video/gif/carousel
+            <div className="mainPaper greenBorder">
+              <div className="introDiv">
+              <img src={agLogoAnim} className="intro2Logo" alt="logo" />
+              <h3 className="bioHeader">
+              About Me:
+              </h3>
+              <p className="bioText">
+              After graduating from General Assembly's web-dev intensive 3yrs ago, I've been coding non-stop. Since GA, I've done frontend(mostly JS) and basic DevOps in a startup environ for 2 years. As well as MERN stack apps w/ graphql (+ some other stuff) for freelance and personal projects up till now. I'd like to (need to) get back into a more structured place than rogue coder in the wild, wild net.
+              I'm my current study goals are mobile (react-native), automation (puppeteer, selenium) material design (been using bootstrap till now). I'd also like to temper my current skills in said structured environment.
+              </p>
+              </div>
+              <div className="over">
+              <img src={skillwheel} className="skillwheel" alt="logo" />
+              </div>
             </div>
             </Zoom>
           )}

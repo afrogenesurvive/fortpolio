@@ -35,7 +35,7 @@ const Links = (props) => {
         <Grow
         in={state.transition}
         style={{ transformOrigin: '0 0 0' }}
-        {...(state.transition ? { timeout: 1000 } : {})}
+        {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
         <div className="selectedLink">
@@ -52,7 +52,7 @@ const Links = (props) => {
         <Grow
         in={state.transition}
         style={{ transformOrigin: '0 0 0' }}
-        {...(state.transition ? { timeout: 1000 } : {})}
+        {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
         <div className="selectedLink">
@@ -70,7 +70,7 @@ const Links = (props) => {
         <Grow
         in={state.transition}
         style={{ transformOrigin: '0 0 0' }}
-        {...(state.transition ? { timeout: 1000 } : {})}
+        {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
         <div className="selectedLink">
@@ -87,7 +87,7 @@ const Links = (props) => {
         <Grow
         in={state.transition}
         style={{ transformOrigin: '0 0 0' }}
-        {...(state.transition ? { timeout: 1000 } : {})}
+        {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
         <div className="selectedLink">
@@ -104,7 +104,7 @@ const Links = (props) => {
         <Grow
         in={state.transition}
         style={{ transformOrigin: '0 0 0' }}
-        {...(state.transition ? { timeout: 1000 } : {})}
+        {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
         <div className="selectedLink">
@@ -121,7 +121,7 @@ const Links = (props) => {
         <Grow
         in={state.transition}
         style={{ transformOrigin: '0 0 0' }}
-        {...(state.transition ? { timeout: 1000 } : {})}
+        {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
         <div className="selectedLink">

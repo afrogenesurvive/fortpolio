@@ -6,6 +6,7 @@ import Slide from '@material-ui/core/Slide';
 import '../App.css';
 import logo from '../logo.svg';
 import agLogoAnim from '../assets/afrogeneanim.gif';
+import myprofile from '../assets/myprofile.png';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -36,7 +37,7 @@ const Intro = (props) => {
           <Grid container spacing={3}>
             <Grid item xs={12}>
             <Slide direction="top" in={props.grow}>
-              <img src={agLogoAnim} className="App-logo  introLogo" alt="logo" />
+              <img src={myprofile} className="App-logo  introLogo yellowBorder" alt="logo" />
             </Slide>
             </Grid>
             <Grid item xs={8} className="info">
@@ -45,10 +46,10 @@ const Intro = (props) => {
               style={{ transformOrigin: '0 0 0' }}
               {...(props.grow ? { timeout: 1000 } : {})}
             >
-            <Paper className="paper">
-            <p className="text">xs=6</p>
-            <p className="text">xs=6</p>
-            <p className="text">xs=6</p>
+            <Paper className="paper redBorder">
+            <p>xs=6</p>
+            <p>xs=6</p>
+            <p>xs=6</p>
             </Paper>
             </Grow>
 
@@ -63,9 +64,9 @@ const Intro = (props) => {
               style={{ transformOrigin: '0 0 0' }}
               {...(props.grow ? { timeout: 2000 } : {})}
             >
-              <Paper className="paper">
-              <p className="text">xs=6</p>
-              <p className="text">xs=6</p>
+              <Paper className="paper greenBorder">
+              <p>xs=6</p>
+              <p>xs=6</p>
               </Paper>
               </Grow>
             </Grid>

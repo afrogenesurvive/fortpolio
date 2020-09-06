@@ -48,7 +48,7 @@ const Works = (props) => {
      }
      setTimeout(()=>{
        setWork({value:next,transition:true})
-     },200)
+     },100)
 
    }
    const prevWork = () => {
@@ -63,7 +63,7 @@ const Works = (props) => {
      }
      setTimeout(()=>{
        setWork({value:prev,transition:true})
-     },200)
+     },100)
 
    }
   return (

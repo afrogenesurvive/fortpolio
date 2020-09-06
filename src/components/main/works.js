@@ -69,10 +69,10 @@ const Works = (props) => {
   return (
     <div className="mainTop">
     <Grid container spacing={1} className="mainGridContainer">
-      <Grid item xs={5}  className="workGridCellEmpty">
+      <Grid item xs={7}  className="workGridCellEmpty">
 
       </Grid>
-      <Grid item xs={7}  className="workGridCell edgeCell">
+      <Grid item xs={5}  className="workGridCell edgeCell">
       <p>
       <span onClick={prevState}>prev</span>
       Select Category
@@ -91,7 +91,7 @@ const Works = (props) => {
       {...(state.transition ? { timeout: 500 } : {})}
       >
       <div>
-      <Grid container spacing={1} className="mainGridContainer">
+      <Grid container spacing={1} className="mainGridContainerWorks">
         <Grid item xs={1} className="worksDetailGrid">
         <ul className="worksDetailselectList">
         <li>
@@ -123,7 +123,7 @@ const Works = (props) => {
       {...(state.transition ? { timeout: 500 } : {})}
       >
       <div>
-      <Grid container spacing={1} className="mainGridContainer">
+      <Grid container spacing={1} className="mainGridContainerWorks">
         <Grid item xs={1} className="worksDetailGrid">
         <ul className="worksDetailselectList">
         <li>
@@ -135,7 +135,7 @@ const Works = (props) => {
         </ul>
         </Grid>
         <Grid item xs={10} className="worksDetailGrid">
-        {work.value && (
+        {work.transition === true && (
         <Slide direction="left" in={work.transition}>
         <p>
         {work.value}
@@ -155,7 +155,7 @@ const Works = (props) => {
       {...(state.transition ? { timeout: 500 } : {})}
       >
       <div>
-      <Grid container spacing={1} className="mainGridContainer">
+      <Grid container spacing={1} className="mainGridContainerWorks">
         <Grid item xs={1} className="worksDetailGrid">
         <ul className="worksDetailselectList">
         <li>
@@ -167,11 +167,13 @@ const Works = (props) => {
         </ul>
         </Grid>
         <Grid item xs={10} className="worksDetailGrid">
-        <Slide direction="up" in={state.transition}>
+        {work.transition === true && (
+        <Slide direction="left" in={work.transition}>
         <p>
         {work.value}
         </p>
         </Slide>
+        )}
         </Grid>
       </Grid>
 

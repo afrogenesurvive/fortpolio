@@ -90,7 +90,7 @@ class Main extends Component {
             <Grow
             in={this.state.transition}
             style={{ transformOrigin: '0 0 0' }}
-            {...(this.state.transition ? { timeout: 1500 } : {})}
+            {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
             <Skills/>
@@ -101,7 +101,7 @@ class Main extends Component {
             <Grow
             in={this.state.transition}
             style={{ transformOrigin: '0 0 0' }}
-            {...(this.state.transition ? { timeout: 1500 } : {})}
+            {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
             <Experience/>
@@ -112,7 +112,7 @@ class Main extends Component {
             <Grow
             in={this.state.transition}
             style={{ transformOrigin: '0 0 0' }}
-            {...(this.state.transition ? { timeout: 1500 } : {})}
+            {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
             <Works
@@ -125,7 +125,7 @@ class Main extends Component {
             <Grow
             in={this.state.transition}
             style={{ transformOrigin: '0 0 0' }}
-            {...(this.state.transition ? { timeout: 1500 } : {})}
+            {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
             <Links/>

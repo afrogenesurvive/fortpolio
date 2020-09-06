@@ -38,7 +38,11 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 1000 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        stuff
+        <div className="selectedLink">
+        <p>stuff</p>
+        <p>stuff</p>
+        <p>stuff</p>
+        </div>
         </Grid>
         </Grow>
         </Grid>
@@ -51,12 +55,17 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 1000 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        stuff
+        <div className="selectedLink">
+        <p>stuff</p>
+        <p>stuff</p>
+        <p>stuff</p>
+        </div>
         </Grid>
         </Grow>
         </Grid>
       )}
       {state.item === 'c' && (
+
         <Grid container spacing={1} className="linkGridContainer">
         <Grow
         in={state.transition}
@@ -64,7 +73,11 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 1000 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        stuff
+        <div className="selectedLink">
+        <p>stuff</p>
+        <p>stuff</p>
+        <p>stuff</p>
+        </div>
         </Grid>
         </Grow>
         </Grid>
@@ -77,7 +90,45 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 1000 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        stuff
+        <div className="selectedLink">
+        <p>stuff</p>
+        <p>stuff</p>
+        <p>stuff</p>
+        </div>
+        </Grid>
+        </Grow>
+        </Grid>
+      )}
+      {state.item === 'e' && (
+        <Grid container spacing={1} className="linkGridContainer">
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 1000 } : {})}
+        >
+        <Grid item xs={12}  className="linksGridCell linkCenterCell">
+        <div className="selectedLink">
+        <p>stuff</p>
+        <p>stuff</p>
+        <p>stuff</p>
+        </div>
+        </Grid>
+        </Grow>
+        </Grid>
+      )}
+      {state.item === 'f' && (
+        <Grid container spacing={1} className="linkGridContainer">
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 1000 } : {})}
+        >
+        <Grid item xs={12}  className="linksGridCell linkCenterCell">
+        <div className="selectedLink">
+        <p>stuff</p>
+        <p>stuff</p>
+        <p>stuff</p>
+        </div>
         </Grid>
         </Grow>
         </Grid>

@@ -9,10 +9,15 @@
   list-style-type: none;
 }
 .skillGrid {
-  /* border: 1px solid black; */
+
 }
 .skillsListItem {
   margin: 3rem auto;
+}
+.skillsCenterCell {
+  margin: 0 3rem;
+  border: 1px solid #ffffff;
+  border-radius: 0 15px 0 15px;
 }
 .experienceItem {
   text-align: initial;
@@ -21,27 +26,46 @@
   height: 5rem;
 }
 .expSubItem {
-  border: 1px solid black;
+  border: 1px solid #ffffff;
+  padding: .5rem 1.5rem;
+  border-radius: 0 15px 0 15px;
 }
 .workGridCell {
-  border: 1px solid black;
+
 }
 .workMidCell {
   height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 0 15px 0 15px;
 }
 .worksDetailGrid {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  margin: 0 auto !important;
 }
 .worksDetailselectList {
   list-style-type: none;
   padding: 0;
 }
+.mainGridContainerWorks {
+  /* width: 100%; */
+}
 .edgeCell {
   overflow: scroll;
 }
 .linkCenterCell {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .linkGridContainer {
-  margin: 15vh auto !important;
+  margin: 10vh auto !important;
+}
+.selectedLink {
+  border: 1px solid #ffffff;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 1rem 3rem;
+  border-radius: 0 15px 0 15px;
 }

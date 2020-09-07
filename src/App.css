@@ -1,8 +1,9 @@
-/* @font-face {
-  font-family: 'WhitRabt';
-  src: url('./assets/whitrabt.ttf');
-} */
+
 @import url('/assets/VT323-Regular.ttf');
+
+.mobile {
+  display: none;
+}
 .App {
   text-align: center;
 }
@@ -21,13 +22,10 @@
   border-radius: 50%;
 }
 .over {
-  /* border: 1px solid yellow; */
   border-radius: 50%;
   position: absolute;
   top: -15%;
   left: 7%;
-  /* z-index: -2; */
-  /* background-image: url("./assets/skillwheel.png"); */
 }
 .introDiv {
   width: 85%;
@@ -47,9 +45,6 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  } */
   .over {
     animation: App-logo-spin infinite 50s linear;
   }
@@ -57,9 +52,9 @@
 
 
 .App-header {
-  /* background-color: #253142; */
+  background-color: #253142;
   /* background-color: #282c34; */
-  background-color: #000000;
+  /* background-color: #000000; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -94,26 +89,22 @@ h1, h2, h3, h4, h5 {
   font-family: 'VT323', monospace !important;
 }
 
-.redGlow {
-  -webkit-animation: redBorderGlow 1.5s ease-in-out infinite alternate;
-  -moz-animation: redBorderGlow 1.5s ease-in-out infinite alternate;
-  animation: redBorderGlow 1.5s ease-in-out infinite alternate;
+.redBorderGlow {
+  -webkit-animation: redBorderGlow 2.5s ease-in-out infinite alternate;
+  -moz-animation: redBorderGlow 2.5s ease-in-out infinite alternate;
+  animation: redBorderGlow 2.5s ease-in-out infinite alternate;
 }
-.yellowGlow {
-  -webkit-animation: yellowBorderGlow 1.5s ease-in-out infinite alternate;
-  -moz-animation: yellowBorderGlow 1.5s ease-in-out infinite alternate;
-  animation: yellowBorderGlow 1.5s ease-in-out infinite alternate;
+.yellowBorderGlow {
+  -webkit-animation: yellowBorderGlow 2.5s ease-in-out infinite alternate;
+  -moz-animation: yellowBorderGlow 2.5s ease-in-out infinite alternate;
+  animation: yellowBorderGlow 2.5s ease-in-out infinite alternate;
 }
-.greenGlow {
-  -webkit-animation: greenBorderGlow 1.5s ease-in-out infinite alternate;
-  -moz-animation: greenBorderGlow 1.5s ease-in-out infinite alternate;
-  animation: greenBorderGlow 1.5s ease-in-out infinite alternate;
+.greenBorderGlow {
+  -webkit-animation: xBorderGlow 2.5s ease-in-out infinite alternate;
+  -moz-animation: xBorderGlow 2.5s ease-in-out infinite alternate;
+  animation: xBorderGlow 2.5s ease-in-out infinite alternate;
 }
-.greenGlowBg {
-  -webkit-animation: greenBgGlow 1.5s ease-in-out infinite alternate;
-  -moz-animation: greenBgGlow 1.5s ease-in-out infinite alternate;
-  animation: greenBgGlow 1.5s ease-in-out infinite alternate;
-}
+
 .main-content {
   /* background-color: #000000; */
   background-color: #253142;
@@ -182,6 +173,15 @@ h1, h2, h3, h4, h5 {
 .mainGridContainer {
   padding: 1rem;
 }
+.mainGridContainer .mobile {
+  position: relative;
+}
+.mainMenuListMobile {
+  position: absolute;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+}
 
 .mainPaper {
   position: relative;
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   padding: 0 3rem;
   overflow: scroll;
-  margin: 5vh 5vw 5vh 0;
+  margin: 5vh 0 5vh 0;
 }
 
 .mainMenuList {
@@ -215,14 +215,38 @@ h1, h2, h3, h4, h5 {
 }
 
 
+@media only screen and (max-width: 420px) {
+  .desktop {
+    display: none;
+  }
+  .intropg {
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+  .main-content {
+    overflow-x: hidden;
+  }
+  .MuiGrid-grid-xs-3 {
+    margin-top: 1.5rem !important;
+  }
+  .MuiGrid-grid-xs-12 {
+    margin: 0 !important;
+  }
+  .mainPaper {
+    margin: 0;
+    padding: .5rem;
+  }
+  .skillwheel {
+    display: none;
+  }
+}
+
+
 
 /*glow*/
 
-/* FF5F5B
-FFB637
-04CC80 */
 
-@-webkit-keyframes redBorderGlow {
+/* @-webkit-keyframes redBorderGlow {
   from {
     box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FF5F5B, 0 0 9px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B, 0 0 15px #FF5F5B;
   }
@@ -245,60 +269,62 @@ FFB637
   to {
     box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FF5F5B, 0 0 8px #FF5F5B, 0 0 10px #FF5F5B, 0 0 11px #FF5F5B, 0 0 13px #FF5F5B;
   }
+} */
+
+
+/* FF5F5B
+FFB637
+04CC80 */
+
+@-webkit-keyframes redBorderGlow {
+  0% {border:2px solid #FF5F5B; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #FF5F5B}
+  100% {border:2px solid #FF5F5B; box-shadow: 0 0 0px #ffffff}
 }
+@-moz-keyframes redBorderGlow {
+  0% {border:2px solid #FF5F5B; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #FF5F5B}
+  100% {border:2px solid #FF5F5B; box-shadow: 0 0 0px #ffffff}
+}
+@keyframes redBorderGlow {
+  0% {border:2px solid #FF5F5B; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #FF5F5B}
+  100% {border:2px solid #FF5F5B; box-shadow: 0 0 0px #ffffff}
+}
+
 @-webkit-keyframes yellowBorderGlow {
-  from {
-    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FFB637, 0 0 9px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637, 0 0 15px #FFB637;
-  }
-  to {
-    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FFB637, 0 0 8px #FFB637, 0 0 10px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637;
-  }
+  0% {border:2px solid #FFB637; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #FFB637}
+  100% {border:2px solid #FFB637; box-shadow: 0 0 0px #ffffff}
 }
 @-moz-keyframes yellowBorderGlow {
-  from {
-    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FFB637, 0 0 9px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637, 0 0 15px #FFB637;
-  }
-  to {
-    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FFB637, 0 0 8px #FFB637, 0 0 10px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637;
-  }
+  0% {border:2px solid #FFB637; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #FFB637}
+  100% {border:2px solid #FFB637; box-shadow: 0 0 0px #ffffff}
 }
 @keyframes yellowBorderGlow {
-  from {
-    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #FFB637, 0 0 9px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637, 0 0 15px #FFB637;
-  }
-  to {
-    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FFB637, 0 0 8px #FFB637, 0 0 10px #FFB637, 0 0 11px #FFB637, 0 0 13px #FFB637;
-  }
+  0% {border:2px solid #FFB637; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #FFB637}
+  100% {border:2px solid #FFB637; box-shadow: 0 0 0px #ffffff}
 }
-@-webkit-keyframes greenBorderGlow {
-  from {
-    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #04CC80, 0 0 9px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80, 0 0 15px #04CC80;
-  }
-  to {
-    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #04CC80, 0 0 8px #04CC80, 0 0 10px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80;
-  }
+@-webkit-keyframes xBorderGlow {
+  0% {border:2px solid #04CC80; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #04CC80}
+  100% {border:2px solid #04CC80; box-shadow: 0 0 0px #ffffff}
 }
-@-moz-keyframes greenBorderGlow {
-  from {
-    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #04CC80, 0 0 9px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80, 0 0 15px #04CC80;
-  }
-  to {
-    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #04CC80, 0 0 8px #04CC80, 0 0 10px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80;
-  }
+@-moz-keyframes xBorderGlow {
+  0% {border:2px solid #04CC80; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #04CC80}
+  100% {border:2px solid #04CC80; box-shadow: 0 0 0px #ffffff}
 }
-@keyframes greenBorderGlow {
-  from {
-    box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #04CC80, 0 0 9px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80, 0 0 15px #04CC80;
-  }
-  to {
-    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #04CC80, 0 0 8px #04CC80, 0 0 10px #04CC80, 0 0 11px #04CC80, 0 0 13px #04CC80;
-  }
+@keyframes xBorderGlow {
+  0% {border:2px solid #04CC80; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #04CC80}
+  100% {border:2px solid #04CC80; box-shadow: 0 0 0px #ffffff}
 }
-@keyframes greenBgGlow {
-  from {
-    border: 1px solid #fff, 1px solid #fff, 1px solid #fff, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80;
-  }
-  to {
-    border: 1px solid #fff, 1px solid #fff, 1px solid #fff, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80, 1px solid #04CC80;
-  }
+
+@keyframes xBorderGlow {
+  0% {border:2px solid #04CC80; box-shadow: 0 0 1px #ffffff}
+  50% {border:2px solid #ffffff; box-shadow: 0 0 10px #04CC80}
+  100% {border:2px solid #04CC80; box-shadow: 0 0 0px #ffffff}
 }

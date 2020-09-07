@@ -15,6 +15,7 @@ import './App.css';
 class App extends Component {
   state = {
     location: window.location.pathname,
+    mobile: false,
     overlay: {
       show: true,
       data: 'loading'
@@ -46,16 +47,21 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(()=>{
-      this.setState({
-        overlay:{
-          show: false,
-          data: null
-        },
-        grow: true,
-        sequencing: false
-    })
-  }, 1600);
+      setTimeout(()=>{
+        this.setState({
+          overlay:{
+            show: false,
+            data: null
+          },
+          grow: true,
+          sequencing: false
+      })
+    }, 1600);
+
+    if (window.outerWidth <= 420) {
+      this.setState({mobile: true})
+    }
+
   }
 
   componentWillUnmount() {
@@ -94,6 +100,7 @@ class App extends Component {
               <Route path="/main" render={(props) => <Main {...props}
                 sequencing={this.state.sequencing}
                 works={this.state.works}
+                mobile={this.state.mobile}
               />}/>
               <Redirect from="/" to="/intro" exact />
               <Redirect from="*" to="/intro" exact />

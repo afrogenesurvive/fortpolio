@@ -2,6 +2,14 @@ import React, {useState} from 'react';
 import Grid from '@material-ui/core/Grid';
 import Grow from '@material-ui/core/Grow';
 import Slide from '@material-ui/core/Slide';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCaretUp,
+  faCaretDown,
+  faCaretLeft,
+  faCaretRight,
+} from '@fortawesome/free-solid-svg-icons';
+// } from '@fortawesome/free-brands-svg-icons';
 import './main.css';
 
 const Works = (props) => {
@@ -72,17 +80,19 @@ const Works = (props) => {
       <Grid item xs={7}  className="workGridCellEmpty">
 
       </Grid>
-      <Grid item xs={5}  className="workGridCell edgeCell redBorder">
+      <Grid item xs={5}  className="workGridCell edgeCell redBorderGlow">
       <p>
-      <span onClick={prevState}>prev</span>
-      Select Category
-      <span onClick={nextState}>next</span>
+      <span>
+      <FontAwesomeIcon icon={faCaretLeft} onClick={prevState} size="2x" className="worksControls"/>
+      </span>
+      Category
+      <FontAwesomeIcon icon={faCaretRight} onClick={nextState} size="2x" className="worksControls"/>
       </p>
       <p>
       {state.value}
       </p>
       </Grid>
-      <Grid item xs={12}  className="workGridCell workMidCell yellowBorder">
+      <Grid item xs={12}  className="workGridCell workMidCell yellowBorderGlow">
 
       {state.value === 'a' && (
       <Grow
@@ -95,10 +105,10 @@ const Works = (props) => {
         <Grid item xs={1} className="worksDetailGrid">
         <ul className="worksDetailselectList">
         <li>
-        <p onClick={prevWork}>up</p>
+        <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="5x" className="worksControls"/>
         </li>
         <li>
-        <p onClick={nextWork}>dwn</p>
+        <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="5x" className="worksControls"/>
         </li>
         </ul>
         </Grid>
@@ -183,7 +193,7 @@ const Works = (props) => {
 
       </Grid>
 
-      <Grid item xs={7}  className="workGridCell edgeCell greenBorder">
+      <Grid item xs={7}  className="workGridCell edgeCell greenBorderGlow">
       {state.value === 'a' && (
       <Slide direction="up" in={state.transition}>
       <div>

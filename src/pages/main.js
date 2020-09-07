@@ -45,46 +45,47 @@ class Main extends Component {
   render() {
     return (
       <div className="App">
-        <Grid container spacing={1} className="mainGridContainer">
-          <Grid item xs={2}  className="mainGridCell">
-          <ul className="mainMenuList">
-            <li className="mainMenuListItem">
-            <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'a')}>
-              Skills
-            </Button>
-            </li>
-            <li className="mainMenuListItem">
-            <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'b')}>
-              Experience
-            </Button>
-            </li>
-            <li className="mainMenuListItem">
-            <Button variant="outlined" className="greenButton" onMouseEnter={this.menuSelect.bind(this,'c')}>
-              Works
-            </Button>
-            </li>
-            <li className="mainMenuListItem">
-            <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'d')}>
-              Links
-            </Button>
-            </li>
-            <li className="mainMenuListItem">
-            <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'')}>
-              Intro
-            </Button>
-            </li>
-          </ul>
-          </Grid>
 
-          <Grid item xs={10} className="mainGridCell">
+      {this.props.mobile === true ? (
+        <Grid container spacing={1} className="mainGridContainer mobile ">
+
+        <ul className="mainMenuListMobile">
+          <li className="mainMenuListItemMobile">
+          <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'a')}>
+            Skills
+          </Button>
+          </li>
+          <li className="mainMenuListItemMobile">
+          <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'b')}>
+            Experience
+          </Button>
+          </li>
+          <li className="mainMenuListItemMobile">
+          <Button variant="outlined" className="greenButton" onMouseEnter={this.menuSelect.bind(this,'c')}>
+            Works
+          </Button>
+          </li>
+          <li className="mainMenuListItemMobile">
+          <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'d')}>
+            Links
+          </Button>
+          </li>
+          <li className="mainMenuListItemMobile">
+          <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'')}>
+            Intro
+          </Button>
+          </li>
+        </ul>
+
+          <Grid item xs={12} className="mainGridCell">
           {this.props.sequencing === false &&
             this.state.menuSelect === '' && (
             <Zoom
             in={this.state.transition}
             style={{ transitionDelay: this.state.transition ? '100ms' : '0ms' }}
             >
-            <div className="mainPaper r">
-              <div className="introDiv greenBorder">
+            <div className="mainPaper ">
+              <div className="introDiv greenBorderGlow ">
               <img src={agLogoAnim} className="intro2Logo" alt="logo" />
               <h3 className="bioHeader">
               About Me:
@@ -148,6 +149,114 @@ class Main extends Component {
           )}
           </Grid>
         </Grid>
+      ):(
+        <Grid container spacing={1} className="mainGridContainer desktop">
+          <Grid item xs={2}  className="mainGridCell">
+          <ul className="mainMenuList">
+            <li className="mainMenuListItem">
+            <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'a')}>
+              Skills
+            </Button>
+            </li>
+            <li className="mainMenuListItem">
+            <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'b')}>
+              Experience
+            </Button>
+            </li>
+            <li className="mainMenuListItem">
+            <Button variant="outlined" className="greenButton" onMouseEnter={this.menuSelect.bind(this,'c')}>
+              Works
+            </Button>
+            </li>
+            <li className="mainMenuListItem">
+            <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'d')}>
+              Links
+            </Button>
+            </li>
+            <li className="mainMenuListItem">
+            <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'')}>
+              Intro
+            </Button>
+            </li>
+          </ul>
+          </Grid>
+
+          <Grid item xs={10} className="mainGridCell">
+          {this.props.sequencing === false &&
+            this.state.menuSelect === '' && (
+            <Zoom
+            in={this.state.transition}
+            style={{ transitionDelay: this.state.transition ? '100ms' : '0ms' }}
+            >
+            <div className="mainPaper ">
+              <div className="introDiv greenBorderGlow ">
+              <img src={agLogoAnim} className="intro2Logo" alt="logo" />
+              <h3 className="bioHeader">
+              About Me:
+              </h3>
+              <p className="bioText">
+              After graduating from General Assembly's web-dev intensive 3yrs ago, I've been coding non-stop. Since GA, I've done frontend(mostly JS) and basic DevOps in a startup environ for 2 years. As well as MERN stack apps w/ graphql (+ some other stuff) for freelance and personal projects up till now. I'd like to (need to) get back into a more structured place than rogue coder in the wild, wild net.
+              I'm my current study goals are mobile (react-native), automation (puppeteer, selenium) material design (been using bootstrap till now). I'd also like to temper my current skills in said structured environment.
+              </p>
+              </div>
+              <div className="over">
+              <img src={skillwheel} className="skillwheel" alt="logo" />
+              </div>
+            </div>
+            </Zoom>
+          )}
+          {this.state.menuSelect === 'a' && (
+            <Grow
+            in={this.state.transition}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(this.state.transition ? { timeout: 500 } : {})}
+            >
+            <div className="mainPaper">
+            <Skills/>
+            </div>
+            </Grow>
+          )}
+          {this.state.menuSelect === 'b' && (
+            <Grow
+            in={this.state.transition}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(this.state.transition ? { timeout: 500 } : {})}
+            >
+            <div className="mainPaper">
+            <Experience/>
+            </div>
+            </Grow>
+          )}
+          {this.state.menuSelect === 'c' && (
+            <Grow
+            in={this.state.transition}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(this.state.transition ? { timeout: 500 } : {})}
+            >
+            <div className="mainPaper">
+            <Works
+              works={this.props.works}
+            />
+            </div>
+            </Grow>
+          )}
+          {this.state.menuSelect === 'd' && (
+            <Grow
+            in={this.state.transition}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(this.state.transition ? { timeout: 500 } : {})}
+            >
+            <div className="mainPaper">
+            <Links/>
+            </div>
+            </Grow>
+          )}
+          </Grid>
+        </Grid>
+      )}
+
+
+
       </div>
     )
   }

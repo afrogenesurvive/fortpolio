@@ -38,7 +38,7 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        <div className="selectedLink redBorder">
+        <div className="selectedLink redBorderGlow">
         <p>stuff</p>
         <p>stuff</p>
         <p>stuff</p>
@@ -55,7 +55,7 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        <div className="selectedLink yellowBorder">
+        <div className="selectedLink yellowBorderGlow">
         <p>stuff</p>
         <p>stuff</p>
         <p>stuff</p>
@@ -73,7 +73,7 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        <div className="selectedLink greenBorder">
+        <div className="selectedLink greenBorderGlow">
         <p>stuff</p>
         <p>stuff</p>
         <p>stuff</p>
@@ -90,7 +90,7 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        <div className="selectedLink redBorder">
+        <div className="selectedLink redBorderGlow">
         <p>stuff</p>
         <p>stuff</p>
         <p>stuff</p>
@@ -107,7 +107,7 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        <div className="selectedLink yellowBorder">
+        <div className="selectedLink yellowBorderGlow">
         <p>stuff</p>
         <p>stuff</p>
         <p>stuff</p>
@@ -124,7 +124,7 @@ const Links = (props) => {
         {...(state.transition ? { timeout: 700 } : {})}
         >
         <Grid item xs={12}  className="linksGridCell linkCenterCell">
-        <div className="selectedLink greenBorder">
+        <div className="selectedLink greenBorderGlow">
         <p>stuff</p>
         <p>stuff</p>
         <p>stuff</p>

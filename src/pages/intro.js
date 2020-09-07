@@ -31,7 +31,7 @@ const Intro = (props) => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header intropg">
 
         <div className="root">
           <Grid container spacing={3}>
@@ -47,9 +47,8 @@ const Intro = (props) => {
               {...(props.grow ? { timeout: 1000 } : {})}
             >
             <Paper className="paper redBorder">
-            <p>xs=6</p>
-            <p>xs=6</p>
-            <p>xs=6</p>
+            <p>Michael Grandison:</p>
+            <p>Web Developer</p>
             </Paper>
             </Grow>
 
@@ -65,8 +64,8 @@ const Intro = (props) => {
               {...(props.grow ? { timeout: 2000 } : {})}
             >
               <Paper className="paper greenBorder">
-              <p>xs=6</p>
-              <p>xs=6</p>
+
+              <p>Portfolio Site</p>
               </Paper>
               </Grow>
             </Grid>

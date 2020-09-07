@@ -41,42 +41,42 @@ const Skills = (props) => {
     <Grid item xs={8}  className="subGridCell">
     {state.item === 'a' && (
       <Slide direction="down" in={state.transition}>
-      <div className="skillsCenterCell redBorder">
+      <div className="skillsCenterCell redBorderGlow">
       <p>Vanilla</p>
       </div>
       </Slide>
     )}
     {state.item === 'b' && (
       <Slide direction="up" in={state.transition}>
-      <div className="skillsCenterCell yellowBorder">
+      <div className="skillsCenterCell yellowBorderGlow">
       <p>Choclate</p>
       </div>
       </Slide>
     )}
     {state.item === 'c' && (
       <Slide direction="down" in={state.transition}>
-      <div className="skillsCenterCell greenBorder">
+      <div className="skillsCenterCell greenBorderGlow">
       <p>Caramel</p>
       </div>
       </Slide>
     )}
     {state.item === 'x' && (
       <Slide direction="up" in={state.transition}>
-      <div className="skillsCenterCell redBorder">
+      <div className="skillsCenterCell redBorderGlow">
       <p>Node</p>
       </div>
       </Slide>
     )}
     {state.item === 'y' && (
       <Slide direction="down" in={state.transition}>
-      <div className="skillsCenterCell yellowBorder">
+      <div className="skillsCenterCell yellowBorderGlow">
       <p>Mongo</p>
       </div>
       </Slide>
     )}
     {state.item === 'z' && (
       <Slide direction="up" in={state.transition}>
-      <div className="skillsCenterCell greenBorder">
+      <div className="skillsCenterCell greenBorderGlow">
       <p>GQL</p>
       </div>
       </Slide>

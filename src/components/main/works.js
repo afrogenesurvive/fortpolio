@@ -76,165 +76,331 @@ const Works = (props) => {
    }
   return (
     <div className="mainTop">
-    <Grid container spacing={1} className="mainGridContainer">
-      <Grid item xs={7}  className="workGridCellEmpty">
+    {props.mobile === true ? (
+      <Grid container spacing={1} className="mainGridContainer">
+        <Grid item xs={5}  className="workGridCellEmpty">
 
-      </Grid>
-      <Grid item xs={5}  className="workGridCell edgeCell redBorderGlow">
-      <p>
-      <span>
-      <FontAwesomeIcon icon={faCaretLeft} onClick={prevState} size="2x" className="worksControls"/>
-      </span>
-      Category
-      <FontAwesomeIcon icon={faCaretRight} onClick={nextState} size="2x" className="worksControls"/>
-      </p>
-      <p>
-      {state.value}
-      </p>
-      </Grid>
-      <Grid item xs={12}  className="workGridCell workMidCell yellowBorderGlow">
-
-      {state.value === 'a' && (
-      <Grow
-      in={state.transition}
-      style={{ transformOrigin: '0 0 0' }}
-      {...(state.transition ? { timeout: 500 } : {})}
-      >
-      <div>
-      <Grid container spacing={1} className="mainGridContainerWorks">
-        <Grid item xs={1} className="worksDetailGrid">
-        <ul className="worksDetailselectList">
-        <li>
-        <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="5x" className="worksControls"/>
-        </li>
-        <li>
-        <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="5x" className="worksControls"/>
-        </li>
-        </ul>
         </Grid>
-        <Grid item xs={10} className="worksDetailGrid">
-        {work.transition === true && (
-        <Slide direction="left" in={work.transition}>
+        <Grid item xs={7}  className="workGridCell edgeCell redBorderGlow">
         <p>
-        {work.value}
+        <span>
+        <FontAwesomeIcon icon={faCaretLeft} onClick={prevState} size="2x" className="worksControls"/>
+        </span>
+        Category
+        <FontAwesomeIcon icon={faCaretRight} onClick={nextState} size="2x" className="worksControls"/>
         </p>
+        <p>
+        {state.value}
+        </p>
+        </Grid>
+
+        <Grid item xs={12}  className="workGridCell workMidCell yellowBorderGlow">
+
+        {state.value === 'a' && (
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 500 } : {})}
+        >
+        <div>
+        <Grid container spacing={1} className="mainGridContainerWorks">
+          <Grid item xs={1} className="worksDetailGrid">
+          <ul className="worksDetailselectList">
+          <li>
+          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="3x" className="worksControls"/>
+          </li>
+          <li>
+          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="3x" className="worksControls"/>
+          </li>
+          </ul>
+          </Grid>
+          <Grid item xs={10} className="worksDetailGrid">
+          {work.transition === true && (
+          <Slide direction="left" in={work.transition}>
+          <p>
+          {work.value}
+          </p>
+          </Slide>
+          )}
+          </Grid>
+        </Grid>
+
+        </div>
+        </Grow>
+        )}
+        {state.value === 'b' && (
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 500 } : {})}
+        >
+        <div>
+        <Grid container spacing={1} className="mainGridContainerWorks">
+          <Grid item xs={1} className="worksDetailGrid">
+          <ul className="worksDetailselectList">
+          <li>
+          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="3x" className="worksControls"/>
+          </li>
+          <li>
+          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="3x" className="worksControls"/>
+          </li>
+          </ul>
+          </Grid>
+          <Grid item xs={10} className="worksDetailGrid">
+          {work.transition === true && (
+          <Slide direction="left" in={work.transition}>
+          <p>
+          {work.value}
+          </p>
+          </Slide>
+          )}
+          </Grid>
+        </Grid>
+
+        </div>
+        </Grow>
+        )}
+        {state.value === 'c' && (
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 500 } : {})}
+        >
+        <div>
+        <Grid container spacing={1} className="mainGridContainerWorks">
+          <Grid item xs={1} className="worksDetailGrid">
+          <ul className="worksDetailselectList">
+          <li>
+          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="3x" className="worksControls"/>
+          </li>
+          <li>
+          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="3x" className="worksControls"/>
+          </li>
+          </ul>
+          </Grid>
+          <Grid item xs={10} className="worksDetailGrid">
+          {work.transition === true && (
+          <Slide direction="left" in={work.transition}>
+          <p>
+          {work.value}
+          </p>
+          </Slide>
+          )}
+          </Grid>
+        </Grid>
+
+        </div>
+        </Grow>
+        )}
+
+        </Grid>
+
+        <Grid item xs={9}  className="workGridCell edgeCell greenBorderGlow">
+        {state.value === 'a' && (
+        <Slide direction="up" in={state.transition}>
+        <div>
+        <p>
+        description Aa
+        </p>
+        <p>
+        links Aa
+        </p>
+        </div>
+        </Slide>
+        )}
+        {state.value === 'b' && (
+        <Slide direction="up" in={state.transition}>
+        <div>
+        <p>
+        description Bb
+        </p>
+        <p>
+        links Bb
+        </p>
+        </div>
+        </Slide>
+        )}
+        {state.value === 'c' && (
+        <Slide direction="up" in={state.transition}>
+        <div>
+        <p>
+        description Cc
+        </p>
+        <p>
+        links Cc
+        </p>
+        </div>
         </Slide>
         )}
         </Grid>
+        <Grid item xs={3}  className="workGridCellEmpty">
+
+        </Grid>
       </Grid>
 
-      </div>
-      </Grow>
-      )}
-      {state.value === 'b' && (
-      <Grow
-      in={state.transition}
-      style={{ transformOrigin: '0 0 0' }}
-      {...(state.transition ? { timeout: 500 } : {})}
-      >
-      <div>
-      <Grid container spacing={1} className="mainGridContainerWorks">
-        <Grid item xs={1} className="worksDetailGrid">
-        <ul className="worksDetailselectList">
-        <li>
-        <p onClick={prevWork}>up</p>
-        </li>
-        <li>
-        <p onClick={nextWork}>dwn</p>
-        </li>
-        </ul>
+    ):(
+      <Grid container spacing={1} className="mainGridContainer">
+        <Grid item xs={7}  className="workGridCellEmpty">
+
         </Grid>
-        <Grid item xs={10} className="worksDetailGrid">
-        {work.transition === true && (
-        <Slide direction="left" in={work.transition}>
+        <Grid item xs={5}  className="workGridCell edgeCell redBorderGlow">
         <p>
-        {work.value}
+        <span>
+        <FontAwesomeIcon icon={faCaretLeft} onClick={prevState} size="2x" className="worksControls"/>
+        </span>
+        Category
+        <FontAwesomeIcon icon={faCaretRight} onClick={nextState} size="2x" className="worksControls"/>
         </p>
+        <p>
+        {state.value}
+        </p>
+        </Grid>
+
+        <Grid item xs={12}  className="workGridCell workMidCell yellowBorderGlow">
+
+        {state.value === 'a' && (
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 500 } : {})}
+        >
+        <div>
+        <Grid container spacing={1} className="mainGridContainerWorks">
+          <Grid item xs={1} className="worksDetailGrid">
+          <ul className="worksDetailselectList">
+          <li>
+          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="5x" className="worksControls"/>
+          </li>
+          <li>
+          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="5x" className="worksControls"/>
+          </li>
+          </ul>
+          </Grid>
+          <Grid item xs={10} className="worksDetailGrid">
+          {work.transition === true && (
+          <Slide direction="left" in={work.transition}>
+          <p>
+          {work.value}
+          </p>
+          </Slide>
+          )}
+          </Grid>
+        </Grid>
+
+        </div>
+        </Grow>
+        )}
+        {state.value === 'b' && (
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 500 } : {})}
+        >
+        <div>
+        <Grid container spacing={1} className="mainGridContainerWorks">
+          <Grid item xs={1} className="worksDetailGrid">
+          <ul className="worksDetailselectList">
+          <li>
+          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="5x" className="worksControls"/>
+          </li>
+          <li>
+          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="5x" className="worksControls"/>
+          </li>
+          </ul>
+          </Grid>
+          <Grid item xs={10} className="worksDetailGrid">
+          {work.transition === true && (
+          <Slide direction="left" in={work.transition}>
+          <p>
+          {work.value}
+          </p>
+          </Slide>
+          )}
+          </Grid>
+        </Grid>
+
+        </div>
+        </Grow>
+        )}
+        {state.value === 'c' && (
+        <Grow
+        in={state.transition}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(state.transition ? { timeout: 500 } : {})}
+        >
+        <div>
+        <Grid container spacing={1} className="mainGridContainerWorks">
+          <Grid item xs={1} className="worksDetailGrid">
+          <ul className="worksDetailselectList">
+          <li>
+          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="5x" className="worksControls"/>
+          </li>
+          <li>
+          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="5x" className="worksControls"/>
+          </li>
+          </ul>
+          </Grid>
+          <Grid item xs={10} className="worksDetailGrid">
+          {work.transition === true && (
+          <Slide direction="left" in={work.transition}>
+          <p>
+          {work.value}
+          </p>
+          </Slide>
+          )}
+          </Grid>
+        </Grid>
+
+        </div>
+        </Grow>
+        )}
+
+        </Grid>
+
+        <Grid item xs={7}  className="workGridCell edgeCell greenBorderGlow">
+        {state.value === 'a' && (
+        <Slide direction="up" in={state.transition}>
+        <div>
+        <p>
+        description Aa
+        </p>
+        <p>
+        links Aa
+        </p>
+        </div>
+        </Slide>
+        )}
+        {state.value === 'b' && (
+        <Slide direction="up" in={state.transition}>
+        <div>
+        <p>
+        description Bb
+        </p>
+        <p>
+        links Bb
+        </p>
+        </div>
+        </Slide>
+        )}
+        {state.value === 'c' && (
+        <Slide direction="up" in={state.transition}>
+        <div>
+        <p>
+        description Cc
+        </p>
+        <p>
+        links Cc
+        </p>
+        </div>
         </Slide>
         )}
         </Grid>
-      </Grid>
+        <Grid item xs={5}  className="workGridCellEmpty">
 
-      </div>
-      </Grow>
-      )}
-      {state.value === 'c' && (
-      <Grow
-      in={state.transition}
-      style={{ transformOrigin: '0 0 0' }}
-      {...(state.transition ? { timeout: 500 } : {})}
-      >
-      <div>
-      <Grid container spacing={1} className="mainGridContainerWorks">
-        <Grid item xs={1} className="worksDetailGrid">
-        <ul className="worksDetailselectList">
-        <li>
-        <p onClick={prevWork}>up</p>
-        </li>
-        <li>
-        <p onClick={nextWork}>dwn</p>
-        </li>
-        </ul>
-        </Grid>
-        <Grid item xs={10} className="worksDetailGrid">
-        {work.transition === true && (
-        <Slide direction="left" in={work.transition}>
-        <p>
-        {work.value}
-        </p>
-        </Slide>
-        )}
         </Grid>
       </Grid>
+    )}
 
-      </div>
-      </Grow>
-      )}
-
-      </Grid>
-
-      <Grid item xs={7}  className="workGridCell edgeCell greenBorderGlow">
-      {state.value === 'a' && (
-      <Slide direction="up" in={state.transition}>
-      <div>
-      <p>
-      description Aa
-      </p>
-      <p>
-      links Aa
-      </p>
-      </div>
-      </Slide>
-      )}
-      {state.value === 'b' && (
-      <Slide direction="up" in={state.transition}>
-      <div>
-      <p>
-      description Bb
-      </p>
-      <p>
-      links Bb
-      </p>
-      </div>
-      </Slide>
-      )}
-      {state.value === 'c' && (
-      <Slide direction="up" in={state.transition}>
-      <div>
-      <p>
-      description Cc
-      </p>
-      <p>
-      links Cc
-      </p>
-      </div>
-      </Slide>
-      )}
-      </Grid>
-      <Grid item xs={5}  className="workGridCellEmpty">
-
-      </Grid>
-    </Grid>
 
     </div>
   )

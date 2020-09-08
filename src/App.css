@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5 {
 }
 .redButton {
   border: 1px solid #FF5F5B !important;
+  background-color: #FF5F5B !important;
 }
 .redButton > .MuiButton-label {
   color: #FF5F5B !important;
@@ -141,6 +142,7 @@ h1, h2, h3, h4, h5 {
 }
 .yellowButton {
   border: 1px solid #FFB637 !important;
+  background-color: #FFB637 !important;
 }
 .yellowButton > .MuiButton-label {
   color: #FFB637 !important;
@@ -150,6 +152,7 @@ h1, h2, h3, h4, h5 {
 }
 .greenButton {
   border: 1px solid #04CC80 !important;
+  background-color: #04CC80 !important;
 }
 .greenButton > .MuiButton-label {
   color: #04CC80 !important;
@@ -225,6 +228,7 @@ h1, h2, h3, h4, h5 {
   }
   .main-content {
     overflow-x: hidden;
+    height: 100vh;
   }
   .MuiGrid-grid-xs-3 {
     margin-top: 1.5rem !important;
@@ -238,6 +242,21 @@ h1, h2, h3, h4, h5 {
   }
   .skillwheel {
     display: none;
+  }
+  .introDiv {
+    margin: 5rem auto 0 auto;
+  }
+  .mainMenuListMobile {
+    z-index: 3;
+    top: 0vh;
+    margin-left: .5rem;
+    text-align: left;
+  }
+  .mainMenuListItemMobile {
+    margin: 1rem 0 0 0;
+  }
+  .mainBtn > .MuiButton-label {
+    color: #ffffff !important;
   }
 }
 

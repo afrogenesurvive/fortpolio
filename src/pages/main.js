@@ -19,6 +19,7 @@ class Main extends Component {
   state = {
     menuSelect: '',
     transition: false,
+    showMenu: false,
   };
 
   constructor(props) {
@@ -41,6 +42,13 @@ class Main extends Component {
       transition: true
     })
   }
+  toggleMenu = () => {
+    if (this.state.showMenu === true ) {
+    this.setState({showMenu: false})
+    } else {
+    this.setState({showMenu: true})
+    }
+  }
 
   render() {
     return (
@@ -48,34 +56,49 @@ class Main extends Component {
 
       {this.props.mobile === true ? (
         <Grid container spacing={1} className="mainGridContainer mobile ">
+        {this.state.showMenu === false ? (
+          <ul className="mainMenuListMobile">
+            <li className="mainMenuListItemMobile">
+            <Button className="redButton mainBtn" onClick={this.toggleMenu}>
+              Menu
+            </Button>
+            </li>
+          </ul>
+        ):(
+          <ul className="mainMenuListMobile">
+            <li className="mainMenuListItemMobile">
+            <Button className="redButton mainBtn" onClick={this.toggleMenu}>
+              X
+            </Button>
+            </li>
+            <li className="mainMenuListItemMobile">
+            <Button className="redButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'a')}>
+              Skills
+            </Button>
+            </li>
+            <li className="mainMenuListItemMobile">
+            <Button className="yellowButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'b')}>
+              Experience
+            </Button>
+            </li>
+            <li className="mainMenuListItemMobile">
+            <Button className="greenButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'c')}>
+              Works
+            </Button>
+            </li>
+            <li className="mainMenuListItemMobile">
+            <Button className="redButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'d')}>
+              Links
+            </Button>
+            </li>
+            <li className="mainMenuListItemMobile">
+            <Button className="yellowButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'')}>
+              Intro
+            </Button>
+            </li>
+          </ul>
+        )}
 
-        <ul className="mainMenuListMobile">
-          <li className="mainMenuListItemMobile">
-          <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'a')}>
-            Skills
-          </Button>
-          </li>
-          <li className="mainMenuListItemMobile">
-          <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'b')}>
-            Experience
-          </Button>
-          </li>
-          <li className="mainMenuListItemMobile">
-          <Button variant="outlined" className="greenButton" onMouseEnter={this.menuSelect.bind(this,'c')}>
-            Works
-          </Button>
-          </li>
-          <li className="mainMenuListItemMobile">
-          <Button variant="outlined" className="redButton" onMouseEnter={this.menuSelect.bind(this,'d')}>
-            Links
-          </Button>
-          </li>
-          <li className="mainMenuListItemMobile">
-          <Button variant="outlined" className="yellowButton" onMouseEnter={this.menuSelect.bind(this,'')}>
-            Intro
-          </Button>
-          </li>
-        </ul>
 
           <Grid item xs={12} className="mainGridCell">
           {this.props.sequencing === false &&
@@ -108,7 +131,9 @@ class Main extends Component {
             {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
-            <Skills/>
+            <Skills
+              mobile={this.props.mobile}
+            />
             </div>
             </Grow>
           )}
@@ -119,7 +144,9 @@ class Main extends Component {
             {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
-            <Experience/>
+            <Experience
+              mobile={this.props.mobile}
+            />
             </div>
             </Grow>
           )}
@@ -132,6 +159,7 @@ class Main extends Component {
             <div className="mainPaper">
             <Works
               works={this.props.works}
+              mobile={this.props.mobile}
             />
             </div>
             </Grow>
@@ -236,6 +264,7 @@ class Main extends Component {
             <div className="mainPaper">
             <Works
               works={this.props.works}
+              mobile={this.state.mobile}
             />
             </div>
             </Grow>

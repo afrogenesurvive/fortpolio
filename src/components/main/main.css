@@ -2,6 +2,7 @@
 
 .timelineTop {
   margin-top: 3rem;
+  position: relative;
 }
 .subGridCell {
   width: fit-content;
@@ -87,6 +88,20 @@
   width: fit-content;
   padding: 1rem 3rem;
   border-radius: 0 15px 0 15px;
+}
+
+@media only screen and (max-width: 420px) {
+  .edgeCell {
+    margin: 1rem auto !important;
+  }
+  .worksControls {
+    margin: 0;
+  }
+  .expSubItem {
+    position: absolute;
+    z-index: 2;
+    background-color: #253142;
+  }
 }
 
 

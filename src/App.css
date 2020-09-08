@@ -132,7 +132,6 @@ h1, h2, h3, h4, h5 {
 }
 .redButton {
   border: 1px solid #FF5F5B !important;
-  background-color: #FF5F5B !important;
 }
 .redButton > .MuiButton-label {
   color: #FF5F5B !important;
@@ -142,7 +141,6 @@ h1, h2, h3, h4, h5 {
 }
 .yellowButton {
   border: 1px solid #FFB637 !important;
-  background-color: #FFB637 !important;
 }
 .yellowButton > .MuiButton-label {
   color: #FFB637 !important;
@@ -152,7 +150,6 @@ h1, h2, h3, h4, h5 {
 }
 .greenButton {
   border: 1px solid #04CC80 !important;
-  background-color: #04CC80 !important;
 }
 .greenButton > .MuiButton-label {
   color: #04CC80 !important;
@@ -217,10 +214,30 @@ h1, h2, h3, h4, h5 {
   border: 1px solid #ffffff !important;
 }
 
+.category {
+}
+.mobileMenuIcon {
+  color: #ffffff;
+}
 
 @media only screen and (max-width: 420px) {
   .desktop {
     display: none;
+  }
+  .redButton {
+    border: 1px solid #FF5F5B !important;
+    background-color: #FF5F5B !important;
+  }
+  .yellowButton {
+    border: 1px solid #FFB637 !important;
+    background-color: #FFB637 !important;
+  }
+  .greenButton {
+    border: 1px solid #04CC80 !important;
+    background-color: #04CC80 !important;
+  }
+  .redButton, .yellowButton, .greenButton > .MuiButton-label {
+    color: #FFffff !important;
   }
   .intropg {
     overflow-x: hidden;
@@ -253,10 +270,13 @@ h1, h2, h3, h4, h5 {
     text-align: left;
   }
   .mainMenuListItemMobile {
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
   .mainBtn > .MuiButton-label {
     color: #ffffff !important;
+  }
+  .right, .left {
+    margin: 0 1rem !important;
   }
 }
 

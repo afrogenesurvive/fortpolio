@@ -14,6 +14,22 @@ import Experience from '../components/main/experience';
 import Works from '../components/main/works';
 import Links from '../components/main/links';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCaretUp,
+  faCaretDown,
+  faCaretLeft,
+  faCaretRight,
+  faTimesCircle,
+  faCompass,
+  faCode,
+  faCodeBranch,
+  faArchive,
+  faExternalLinkAlt,
+  faEllipsisH,
+} from '@fortawesome/free-solid-svg-icons';
+// } from '@fortawesome/free-brands-svg-icons';
+
 class Main extends Component {
 
   state = {
@@ -59,42 +75,28 @@ class Main extends Component {
         {this.state.showMenu === false ? (
           <ul className="mainMenuListMobile">
             <li className="mainMenuListItemMobile">
-            <Button className="redButton mainBtn" onClick={this.toggleMenu}>
-              Menu
-            </Button>
+            <FontAwesomeIcon icon={faCompass} onClick={this.toggleMenu} size="2x" className="mobileMenuIcon"/>
             </li>
           </ul>
         ):(
           <ul className="mainMenuListMobile">
             <li className="mainMenuListItemMobile">
-            <Button className="redButton mainBtn" onClick={this.toggleMenu}>
-              X
-            </Button>
+            <FontAwesomeIcon icon={faTimesCircle} onClick={this.toggleMenu} size="2x" className="mobileMenuIcon"/>
             </li>
             <li className="mainMenuListItemMobile">
-            <Button className="redButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'a')}>
-              Skills
-            </Button>
+            <FontAwesomeIcon icon={faCode} onClick={this.menuSelect.bind(this,'a')} size="2x" className="mobileMenuIcon"/>
             </li>
             <li className="mainMenuListItemMobile">
-            <Button className="yellowButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'b')}>
-              Experience
-            </Button>
+            <FontAwesomeIcon icon={faCodeBranch} onClick={this.menuSelect.bind(this,'b')} size="2x" className="mobileMenuIcon"/>
             </li>
             <li className="mainMenuListItemMobile">
-            <Button className="greenButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'c')}>
-              Works
-            </Button>
+            <FontAwesomeIcon icon={faArchive} onClick={this.menuSelect.bind(this,'c')} size="2x" className="mobileMenuIcon"/>
             </li>
             <li className="mainMenuListItemMobile">
-            <Button className="redButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'d')}>
-              Links
-            </Button>
+            <FontAwesomeIcon icon={faExternalLinkAlt} onClick={this.menuSelect.bind(this,'d')} size="2x" className="mobileMenuIcon"/>
             </li>
             <li className="mainMenuListItemMobile">
-            <Button className="yellowButton mainBtn" onMouseEnter={this.menuSelect.bind(this,'')}>
-              Intro
-            </Button>
+            <FontAwesomeIcon icon={faEllipsisH} onClick={this.menuSelect.bind(this,'')} size="2x" className="mobileMenuIcon"/>
             </li>
           </ul>
         )}
@@ -240,7 +242,9 @@ class Main extends Component {
             {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
-            <Skills/>
+            <Skills
+            mobile={this.props.mobile}
+            />
             </div>
             </Grow>
           )}
@@ -251,7 +255,9 @@ class Main extends Component {
             {...(this.state.transition ? { timeout: 500 } : {})}
             >
             <div className="mainPaper">
-            <Experience/>
+            <Experience
+            mobile={this.props.mobile}
+            />
             </div>
             </Grow>
           )}

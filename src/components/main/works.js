@@ -84,10 +84,10 @@ const Works = (props) => {
         <Grid item xs={7}  className="workGridCell edgeCell redBorderGlow">
         <p>
         <span>
-        <FontAwesomeIcon icon={faCaretLeft} onClick={prevState} size="2x" className="worksControls"/>
+        <FontAwesomeIcon icon={faCaretLeft} onClick={prevState} size="2x" className="worksControls left"/>
         </span>
-        Category
-        <FontAwesomeIcon icon={faCaretRight} onClick={nextState} size="2x" className="worksControls"/>
+        <span className="category">Category</span>
+        <FontAwesomeIcon icon={faCaretRight} onClick={nextState} size="2x" className="worksControls right"/>
         </p>
         <p>
         {state.value}
@@ -104,17 +104,7 @@ const Works = (props) => {
         >
         <div>
         <Grid container spacing={1} className="mainGridContainerWorks">
-          <Grid item xs={1} className="worksDetailGrid">
-          <ul className="worksDetailselectList">
-          <li>
-          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="3x" className="worksControls"/>
-          </li>
-          <li>
-          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="3x" className="worksControls"/>
-          </li>
-          </ul>
-          </Grid>
-          <Grid item xs={10} className="worksDetailGrid">
+          <Grid item xs={12} className="worksDetailGrid">
           {work.transition === true && (
           <Slide direction="left" in={work.transition}>
           <p>
@@ -168,17 +158,7 @@ const Works = (props) => {
         >
         <div>
         <Grid container spacing={1} className="mainGridContainerWorks">
-          <Grid item xs={1} className="worksDetailGrid">
-          <ul className="worksDetailselectList">
-          <li>
-          <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="3x" className="worksControls"/>
-          </li>
-          <li>
-          <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="3x" className="worksControls"/>
-          </li>
-          </ul>
-          </Grid>
-          <Grid item xs={10} className="worksDetailGrid">
+          <Grid item xs={12} className="worksDetailGrid">
           {work.transition === true && (
           <Slide direction="left" in={work.transition}>
           <p>
@@ -234,7 +214,14 @@ const Works = (props) => {
         )}
         </Grid>
         <Grid item xs={3}  className="workGridCellEmpty">
-
+        <ul className="worksDetailselectList">
+        <li>
+        <FontAwesomeIcon icon={faCaretUp} onClick={prevWork} size="3x" className="worksControls"/>
+        </li>
+        <li>
+        <FontAwesomeIcon icon={faCaretDown} onClick={nextWork} size="3x" className="worksControls"/>
+        </li>
+        </ul>
         </Grid>
       </Grid>
 
@@ -248,7 +235,7 @@ const Works = (props) => {
         <span>
         <FontAwesomeIcon icon={faCaretLeft} onClick={prevState} size="2x" className="worksControls"/>
         </span>
-        Category
+        <span className="category">Category</span>
         <FontAwesomeIcon icon={faCaretRight} onClick={nextState} size="2x" className="worksControls"/>
         </p>
         <p>

@@ -7,9 +7,13 @@
 .subGridCell {
   width: fit-content;
 }
+.whtIcon {
+  color: #ffffff;
+}
 .skillsList {
   padding: 0;
   list-style-type: none;
+  margin: 0;
 }
 .skillGrid {
 

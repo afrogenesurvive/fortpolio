@@ -218,6 +218,7 @@ h1, h2, h3, h4, h5 {
 }
 .mobileMenuIcon {
   color: #ffffff;
+
 }
 
 @media only screen and (max-width: 420px) {

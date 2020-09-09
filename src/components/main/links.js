@@ -16,17 +16,17 @@ const Links = (props) => {
     <Grid container spacing={1} className="linkGridContainer">
       <Grid item xs={4}  className="linksGridCell">
       <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,{item:'a',transition: true})}>
-        x
+        LinkedIn
       </Button>
       </Grid>
       <Grid item xs={4}  className="linksGridCell">
       <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,{item:'b',transition: true})}>
-        x
+        CV
       </Button>
       </Grid>
       <Grid item xs={4}  className="linksGridCell">
       <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,{item:'c',transition: true})}>
-        x
+        Social
       </Button>
       </Grid>
     </Grid>
@@ -137,12 +137,12 @@ const Links = (props) => {
     <Grid container spacing={1} className="linkGridContainer">
       <Grid item xs={4}  className="linksGridCell">
       <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,{item:'d',transition: true})}>
-        x
+        Github
       </Button>
       </Grid>
       <Grid item xs={4}  className="linksGridCell">
       <Button variant="outlined" color="primary" className="skillsBtn" onMouseEnter={handleStateChange.bind(this,{item:'e',transition: true})}>
-        x
+        Other
       </Button>
       </Grid>
       <Grid item xs={4}  className="linksGridCell">

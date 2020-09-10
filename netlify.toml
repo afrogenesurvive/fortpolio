@@ -3,7 +3,7 @@
   # publish="/build"
 
   [build]
-  command = "npm run-script build"
+  command = "CI= npm run-script build"
   publish="/build"
   base = "/"
 

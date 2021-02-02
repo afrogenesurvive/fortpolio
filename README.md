@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Material Porfolio
 
-## Available Scripts
+## What is it??
 
-In the project directory, you can run:
+An incomplete portfolio site and Material React practice site.
 
-### `npm start`
+### Features:
+- Various Material React components
+- Material react Animations
+- Nested menu UI
+- Basic portfolio information
+- Deployed w/ Netlify
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<img src="https://i.imgur.com/YgInIDf.png" height="440" />
+<img src="https://i.imgur.com/vsid9mZ.png" height="440" />
+<img src="https://i.imgur.com/K8xwJpx.png" height="440" />
+<img src="https://i.imgur.com/BpS9BCw.png" height="440" />
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Why was it made??
 
-### `npm run build`
+- Originally intended as a portfolio website but became an exercise in UI building with Material design
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How was it made??
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Made using:
+  - React w/ Create React App
+  - Material UI
+  - Dev Notes:
+    - Might actually fill out my portfolio information and use for job seeking one day
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Try it yourself??
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Download the code or clone the repository
+- Run "npm install" in the root folder
+- Run "npm start" in the root folder
+- Visit @ https://afrogenesurviveportfolio.netlify.app/
